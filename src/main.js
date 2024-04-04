@@ -1,9 +1,10 @@
 import { pixabayPhoto } from './js/pixabay-api';
-import { renderPhotos } from './js/render-functions';
+// import { renderPhotos } from './js/render-functions';
 import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-import "simplelightbox/dist/simple-lightbox.min.css";
+
 
 const form = document.querySelector('.search-form');
 export const inputSearch = form.elements.search;
