@@ -11,7 +11,7 @@ export function pixabayPhoto() {
         safesearch: true
     });
     showLoader();
-    return fetch(`https://pixabay.com/api/?${searchParams}`).then(res => res.json())
+    return fetch(`https://pixabay.com/api/?${searchParams}`)
         .then((res) => {
             if (!res.ok) {
                 throw new Error(response.status);
