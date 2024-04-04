@@ -7,8 +7,49 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 const form = document.querySelector('.search-form');
 export const inputSearch = form.elements.search;
-export const listOfPhotos = document.querySelector('.gallery');
+export const photosGallery = document.querySelector('.gallery');
 export const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250
 });
+
+form.addEventListener('submit', sendForm);
+
+function sendForm(e) {
+    e.preventDefault();
+    photosGallery.innerHTML = "";
+    
+    const input = evt.target.elements.search.value.trim();
+    if (input !== '') {
+        window.onload = () => {
+            pixabayPhoto()
+                .then((photos) => {
+                    renderPhotos(photos.hits);
+                    hideLoader();
+                })
+                .catch((error) => {
+                    console.log(error);
+                    hideLoader();
+                    iziToast.error({
+                        theme: 'dark',
+                        backgroundColor: '#EF4040',
+                        progressBarColor: '#B51B1B',
+                        message: 'Sorry, an error occurred while loading. Please try again!',
+                        messageColor: '#FAFAFB',
+                        position: 'topRight',
+                    });
+                });
+        }
+        window.onload();
+            form.reset();
+        } else {
+            iziToast.show({
+                theme: 'dark',
+                backgroundColor: '#EF4040',
+                progressBarColor: '#B51B1B',
+                message: 'Please complete the field!',
+                messageColor: '#FAFAFB',
+                position: 'topRight',
+            });
+        }
+    }
