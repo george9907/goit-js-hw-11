@@ -134,6 +134,13 @@ body {
 .photo {
   width: 100%;
   height: 152px;
+  object-fit: cover;
+}
+
+
+.accent {
+  font-weight: 600;
+  line-height: 1.33;
 }
 
 .photo-information-container {
