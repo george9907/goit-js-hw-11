@@ -26,11 +26,11 @@ const hideLoader = () => {
 
 form.addEventListener('submit', sendForm);
 
-function sendForm(e) {
-    e.preventDefault();
+function sendForm(evt) {
+    evt.preventDefault();
     photosGallery.innerHTML = "";
     
-    const input = e.target.elements.search.value.trim();
+    const input = evt.target.elements.search.value.trim();
     if (input !== '') {
         window.onload = () => {
             pixabayPhoto()

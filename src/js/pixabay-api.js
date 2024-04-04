@@ -12,9 +12,9 @@ export function pixabayPhoto() {
     });
     showLoader();
     return fetch(`https://pixabay.com/api/?${searchParams}`)
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error(res.status);
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(response.status);
             }
             return response.json();
         }
