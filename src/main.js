@@ -30,7 +30,7 @@ function sendForm(e) {
     e.preventDefault();
     photosGallery.innerHTML = "";
     
-    const input = evt.target.elements.search.value.trim();
+    const input = e.target.elements.search.value.trim();
     if (input !== '') {
         window.onload = () => {
             pixabayPhoto()
