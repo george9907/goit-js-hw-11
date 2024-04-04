@@ -13,6 +13,7 @@ export const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250
 });
+
 const preloader = document.querySelector('.loader');
 preloader.style.display = 'none';
 
