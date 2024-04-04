@@ -14,7 +14,7 @@ export function pixabayPhoto() {
     return fetch(`https://pixabay.com/api/?${searchParams}`)
         .then((res) => {
             if (!res.ok) {
-                throw new Error(response.status);
+                throw new Error(res.status);
             }
             return response.json();
         }

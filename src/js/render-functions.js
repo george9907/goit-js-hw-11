@@ -30,6 +30,6 @@ export function renderPhotos(arr) {
         })
             .join("");
         photosGallery.insertAdjacentHTML("beforeend", markup);
-        lightbox.remove();
+        lightbox.refresh();
     }
 }
