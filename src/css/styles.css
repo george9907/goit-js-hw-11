@@ -166,7 +166,7 @@ body {
 /* ------Loder------- */
 
 .loader {
-  color: #FFF;
+  color: #000;
   display: inline-block;
   position: relative;
   font-size: 48px;
