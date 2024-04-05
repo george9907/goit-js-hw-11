@@ -166,6 +166,7 @@ body {
 /* ------Loder------- */
 
 .loader {
+  margin: 0 auto;
   color: #2E2F42;
   display: inline-block;
   position: relative;
@@ -181,9 +182,11 @@ body {
   height: 24px;
   background: currentColor;
   position: absolute;
-  bottom: 10px;
+  top: 60px;
+  left: 50%;
+  transform:translateX(-50%);
   box-sizing: border-box;
-  animation: animloader 1s linear infinite;
+  animation: animloader 5s linear infinite;
 }
 
 @keyframes animloader {
