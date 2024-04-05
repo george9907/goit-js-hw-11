@@ -166,25 +166,26 @@ body {
 /* ------Loder------- */
 
 .loader {
-  margin: 0 auto;
   color: #2E2F42;
   display: inline-block;
-  position: relative;
-  font-size: 16px;
-  font-family: Montserrat, sans-serif;
-  box-sizing: border-box;
-}
-
-.loader::after {
-  margin: 0 auto;
-  content: '';
+margin: 0 auto;
   width: 256px;
   height: 24px;
   background: currentColor;
   position: absolute;
   top: 60px;
   left: 50%;
-  transform:translateX(-50%);
+  transform: translateX(-50%);  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  box-sizing: border-box;
+}
+
+.loader::after {
+  margin: 0 auto;
+  width: 256px;
+  height: 24px;
+  background: currentColor;
+  position: absolute;
   box-sizing: border-box;
   animation: animloader 5s linear infinite;
 }
